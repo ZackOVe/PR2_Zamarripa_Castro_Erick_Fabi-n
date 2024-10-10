@@ -18,7 +18,6 @@ def multiplicar(numeros):
     for numero in numeros:
         resultado *= numero
     return resultado
-
-# Ejemplo de uso
-print(suma([1, 2, 3, 4]))  
-print(multiplicar([1, 2, 3, 4]))  
+print("Los resultados son: ")
+print(suma([16, 22, 13, 9]))  
+print(multiplicar([17, 28, 20, 14])) 
