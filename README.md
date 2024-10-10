@@ -9,21 +9,18 @@ print ("Zamarripa Castro Erick Fabián_3W_1220")
 
 print("")
 
-#Define el saludo para luego imprimir el texto declarado
-
 def mostrar_saludo():
 
 print("Hey amigos!")
-    
-print("")
 
 #Llamada a la función
 
 mostrar_saludo()
 
-![image](https://github.com/user-attachments/assets/0b0d9c7b-8936-4ac4-96d6-542d27a485c4)
 
-![image](https://github.com/user-attachments/assets/d7141384-4aed-4547-b557-764f42b58842)
+![image](https://github.com/user-attachments/assets/6090fc6e-34c9-464f-9962-b3a03f321a4d)
+
+![image](https://github.com/user-attachments/assets/0b7163f2-0e0b-49b7-bc33-a0f34fce57f5)
 
 PUNTO #2
 
@@ -43,9 +40,9 @@ def saludar(nombre):
 
 saludar("Fabián")
 
-![image](https://github.com/user-attachments/assets/5404b214-0962-44c6-bf09-687b7d7f102a)
+![image](https://github.com/user-attachments/assets/4515cda1-19bc-4964-83b6-0c319826c1b1)
 
-![image](https://github.com/user-attachments/assets/714da472-2f80-46f3-96bc-0dba504a87cf)
+![image](https://github.com/user-attachments/assets/f31f41c1-c46e-42f9-b368-48fac40466ca)
 
 PUNTO #3
 
@@ -56,31 +53,33 @@ print ("Zamarripa Castro Erick Fabián_3W_1220")
 print("")
 
 def factorial(n):
-    
-  #Calcula el factorial de un número positivo.
-    
-  if n < 0:
-        return "Número no válido"
-    if n == 0:
-    
-   return 1
-        
-resultado = 1
-
-for i in range(1, n + 1):
-    
-   resultado *= 1
    
-return resultado
-    
+if n == 1 or n == 0:
+     return 1
+    else:
+        return n * factorial(n - 1)
 
-# Ejemplo de uso
+def main():
+    while True:
+        try:
+            numero = int(input("Ingresa un número entero positivo (mayor que 0): "))
+            if numero <= 0:
+                print("Por favor, ingresa un número mayor que 0.")
+            else:
+                resultado = factorial(numero)
+                print(f"El factorial de {numero} es {resultado}.")
+                break
+        except ValueError:
+            print("Entrada no válida. Asegúrate de ingresar un número entero.")
 
-print(factorial(5))
+if __name__ == "__main__":
+    main()
 
-![image](https://github.com/user-attachments/assets/f0b2e6ae-4cc8-4182-b2bc-8014d6927620)
 
-![image](https://github.com/user-attachments/assets/e8a0504a-711d-491b-80c9-4b5769dedf5a)
+![image](https://github.com/user-attachments/assets/4ae02a01-ba46-4674-905b-ff03f241ec67)
+
+![image](https://github.com/user-attachments/assets/c338b174-d35d-406a-b556-05c67ff02da9)
+
 
 PUNTO #4
 
@@ -90,20 +89,25 @@ print ("Zamarripa Castro Erick Fabián_3W_1220")
 
 print("")
 
-def calcular_factura(sin_iva, iva=21):
-    
-  #Calcula el total de una factura incluyendo IVA.
-    
-  total = sin_iva * (1 + iva / 100)
- return total
+#Pedir al usuario que ingrese la cantidad sin IVA
 
-# Ejemplo de uso
+cantidad_sin_iva = float(input("Ingrese la cantidad sin IVA: "))
 
-print(calcular_factura(100))
+#Pedir al usuario que ingrese el porcentaje de IVA
 
-![image](https://github.com/user-attachments/assets/8444c39b-006e-475f-95de-8a59f91b772d)
+iva = float(input("Ingrese el porcentaje de IVA: "))
 
-![image](https://github.com/user-attachments/assets/e821c4d5-79f3-404e-8093-4e55cb7788d2)
+#Calcular el total
+
+total = cantidad_sin_iva + (cantidad_sin_iva * (iva / 100))
+
+#Mostrar el total
+
+print(f"El total de la factura después del IVA es: {total:.2f}")
+
+![image](https://github.com/user-attachments/assets/a87b6821-868b-4983-8611-a320786e44ea)
+
+![image](https://github.com/user-attachments/assets/33835a3d-c626-4905-b44b-4592b8ca97f6)
 
 PUNTO #5
 
@@ -113,52 +117,78 @@ print ("Zamarripa Castro Erick Fabián_3W_1220")
 
 print("")
 
+
 import math
 
-def area_circulo(radio):
-    
-  #Calcula el área de un círculo.
+#Función para calcular el área de un círculo
 
-   return math.pi * radio ** 2
+def area_circulo(radio):
+
+ return math.pi * (radio ** 2)
+
+#Función para calcular el volumen de un cilindro
 
 def volumen_cilindro(radio, altura):
 
-   #Calcula el volumen de un cilindro.
-    
-   area = area_circulo(radio)
-   
-   return area * altura
+  area = area_circulo(radio)
 
-# Ejemplo de uso
+ return area * altura
 
-print(area_circulo(5))  
+#Solicitar el radio para el círculo
 
-print(volumen_cilindro(5, 10)) 
+radio = float(input("Ingrese el radio del círculo: "))
 
-![image](https://github.com/user-attachments/assets/3c0d46d6-3d95-4041-aebc-6fbf8242b2f3)
+area = area_circulo(radio)
 
-![image](https://github.com/user-attachments/assets/66d465d7-e164-4575-820f-968ec6256a34)
+print(f"El área del círculo es: {area:.2f}")
+
+#Solicitar el radio y la altura del cilindro
+
+altura = float(input("Ingrese la altura del cilindro: "))
+
+volumen = volumen_cilindro(radio, altura)
+
+print(f"El volumen del cilindro es: {volumen:.2f}")
+
+![image](https://github.com/user-attachments/assets/4b0353ee-4f8f-4c66-b7d5-fbc3807abdba)
+
+![image](https://github.com/user-attachments/assets/8c36ac15-e695-44d3-88db-cc652d8b76e8)
+
+
+![image](https://github.com/user-attachments/assets/a6b94574-8cd9-4d64-8f9a-d52bd84c5840)
+
 
 PUNTO #6
 
 print("")
 
 print ("Zamarripa Castro Erick Fabián_3W_1220")
+
 print("")
 
-def validar_email(email):
+#Función para verificar la validez del email
 
- #Verifica si un email es válido (contiene '@').    
- 
- return '@' in email
+def es_email_valido(email):
 
-# Ejemplo de uso
+  return "@" in email
 
-print(validar_email("usuario@ejemplo.com")) 
+#Solicitar al usuario que ingrese su dirección de email
 
-![image](https://github.com/user-attachments/assets/135eaf1f-2c04-4c72-9a7f-aded2b8da7cc)
+email = input("Ingrese su dirección de email: ")
 
-![image](https://github.com/user-attachments/assets/be7d8960-9f5b-4bd2-83d0-4dbed24c180e)
+#Verificar la validez del email
+
+if es_email_valido(email):
+
+print("La dirección de email es válida.")
+
+else:
+
+ print("La dirección de email no es válida.")
+
+![image](https://github.com/user-attachments/assets/e09ea14b-a18e-45b9-ab5c-0cfbfd7d11e3)
+
+![image](https://github.com/user-attachments/assets/fa45e903-ed58-48ca-b21a-936fad1f9d7e)
 
 PUNTO #7
 
@@ -179,7 +209,7 @@ def longitud_ultima_palabra(texto):
   
  return 0
 
-# Ejemplo de uso
+#Ejemplo de uso
 
 print(longitud_ultima_palabra("Hola mundo"))  
 
@@ -197,17 +227,20 @@ print("")
 
 def mayor_de_tres(a, b, c):
     
-#Devuelve el mayor de tres números.
+ #Devuelve el mayor de tres números.
     
- return max(a, b, c)
+return max(a, b, c)
 
-# Ejemplo de uso
+#Ejemplo de uso
 
-print(mayor_de_tres(10, 20, 15)) 
+print ("El mayor es: ")
 
-![image](https://github.com/user-attachments/assets/9342c9c7-7017-4554-8b6c-2c1733d22b13)
+print(mayor_de_tres(10, 20, 15))  
 
-![image](https://github.com/user-attachments/assets/c889e3a7-7e80-4846-a585-7f44d86e1eb8)
+![image](https://github.com/user-attachments/assets/ab122263-b5bb-452d-b72e-8e1a8e5f2f1d)
+
+![image](https://github.com/user-attachments/assets/99f2d029-9f5a-495a-b39d-ff9da62a0fb0)
+
 
 PUNTO #9
 
@@ -219,37 +252,35 @@ print("")
 
 def suma(numeros):
     
-  #Suma todos los números de una lista.
+ #Suma todos los números de una lista.
 
 total = 0
 
-for numero in numeros:
-    
+ for numero in numeros:
+ 
  total += numero
-        
- return total
+    return total
 
 def multiplicar(numeros):
     
   #Multiplica todos los números de una lista.
-  
-resultado = 1
-
- for numero in numeros:
- 
- resultado *= numero
- 
-   return resultado
     
-# Ejemplo de uso
+ resultado = 1
 
-print(suma([1, 2, 3, 4]))  
+for numero in numeros:
+    
+resultado *= numero
+       
+return resultado
+print("Los resultados son: ")
 
-print(multiplicar([1, 2, 3, 4]))  
+print(suma([16, 22, 13, 9]))  
 
-![image](https://github.com/user-attachments/assets/f25735c2-c8f9-43b0-8ded-19df7b88f32f)
+print(multiplicar([17, 28, 20, 14])) 
 
-![image](https://github.com/user-attachments/assets/452f25d0-5326-4758-b99e-65f20413cc8f)
+![image](https://github.com/user-attachments/assets/844559df-08fb-401e-8482-248619fda21f)
+
+![image](https://github.com/user-attachments/assets/fa1c71b2-6f2b-45f2-bd88-77ddf573a0a9)
 
 PUNTO #10
 
@@ -265,15 +296,15 @@ def es_vocal(caracter):
    
  return caracter.lower() in 'aeiou'
 
-# Ejemplo de uso
+#Ejemplo de uso
 
 print(es_vocal('a'))  
 
 print(es_vocal('b'))  
 
-![image](https://github.com/user-attachments/assets/f28933b2-1f3d-498e-a235-9f1b05f3755e)
+![image](https://github.com/user-attachments/assets/1cfde91b-79ec-4693-b60c-60cb7845f3cc)
 
-![image](https://github.com/user-attachments/assets/48a2b095-39ea-44ed-bffb-70d30f322359)
+![image](https://github.com/user-attachments/assets/2f6487fb-a304-43a5-928e-fd4b7212dfdb)
 
 PUNTO #11
 
@@ -283,20 +314,35 @@ print ("Zamarripa Castro Erick Fabián_3W_1220")
 
 print("")
 
-def distancia_dos_puntos(punto1, punto2):
-    
- #Calcula la distancia entre dos puntos.
-    
- x1, y1 = punto1
- 
-  x2, y2 = punto2
-  
- return (x2 - x1, y2 - y1)
+import math
 
-# Ejemplo de uso
+#Función para calcular la distancia entre dos puntos
 
-print(distancia_dos_puntos((1, 2), (4, 6))) 
+def calcular_distancia(x1, y1, x2, y2):
 
-![image](https://github.com/user-attachments/assets/7fdee405-3cb9-4d18-b6a9-b3d57c11d688)
+return math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
 
-![image](https://github.com/user-attachments/assets/d57c45d9-b944-4c3d-9818-d9d46b154827)
+#Solicitar las coordenadas del primer punto
+
+x1 = float(input("Ingrese la coordenada x del primer punto: "))
+
+y1 = float(input("Ingrese la coordenada y del primer punto: "))
+
+#Solicitar las coordenadas del segundo punto
+
+x2 = float(input("Ingrese la coordenada x del segundo punto: "))
+
+y2 = float(input("Ingrese la coordenada y del segundo punto: "))
+
+#Calcular la distancia
+
+distancia = calcular_distancia(x1, y1, x2, y2)
+
+#Mostrar el resultado
+
+print(f"La distancia entre los puntos es: {distancia:.2f}")
+
+![image](https://github.com/user-attachments/assets/a6514b7a-accd-4129-91d6-391e1ef513c4)
+
+![image](https://github.com/user-attachments/assets/20283199-9c32-4641-88ae-0b319f8b386a)
+
