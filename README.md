@@ -1,7 +1,8 @@
 # PR2_Zamarripa_Castro_Erick_Fabi-n
 Practica de varios puntos de 11 funciones de proposito variado
 
-PUNTO #1}
+PUNTO #1
+
 print("")
 
 print ("Zamarripa Castro Erick Fabián_3W_1220")
