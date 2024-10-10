@@ -2,7 +2,6 @@
 Practica de varios puntos de 11 funciones de proposito variado
 
 PUNTO #1}
-
 print("")
 
 print ("Zamarripa Castro Erick Fabián_3W_1220")
@@ -122,14 +121,18 @@ print(volumen_cilindro(5, 10))  # Salida: 392.70
 PUNTO #6
 
 print("")
+
 print ("Zamarripa Castro Erick Fabián_3W_1220")
 print("")
+
 def validar_email(email):
-    
+
  #Verifica si un email es válido (contiene '@').    
+ 
  return '@' in email
 
 # Ejemplo de uso
+
 print(validar_email("usuario@ejemplo.com"))  # Salida: True
 
 
