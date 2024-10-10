@@ -8,5 +8,5 @@ def calcular_factura(sin_iva, iva=21):
     total = sin_iva * (1 + iva / 100)
     return total
 
-# Ejemplo de uso
+
 print(calcular_factura(100))  
