@@ -4,19 +4,25 @@ print("")
 
 import math
 
-def area_circulo(radio):
-    
-    #Calcula el área de un círculo.
+#Función para calcular el área de un círculo
 
-    return math.pi * radio ** 2
+def area_circulo(radio):
+    return math.pi * (radio ** 2)
+
+#Función para calcular el volumen de un cilindro
 
 def volumen_cilindro(radio, altura):
-
-    #Calcula el volumen de un cilindro.
-    
     area = area_circulo(radio)
     return area * altura
 
-# Ejemplo de uso
-print(area_circulo(5))  
-print(volumen_cilindro(5, 10))  
+#Solicitar el radio para el círculo
+
+radio = float(input("Ingrese el radio del círculo: "))
+area = area_circulo(radio)
+print(f"El área del círculo es: {area:.2f}")
+
+#Solicitar el radio y la altura del cilindro
+
+altura = float(input("Ingrese la altura del cilindro: "))
+volumen = volumen_cilindro(radio, altura)
+print(f"El volumen del cilindro es: {volumen:.2f}")
