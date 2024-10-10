@@ -1,12 +1,15 @@
 print("")
 print ("Zamarripa Castro Erick Fabián_3W_1220")
 print("")
-def calcular_factura(sin_iva, iva=21):
-    
-    #Calcula el total de una factura incluyendo IVA.
-    
-    total = sin_iva * (1 + iva / 100)
-    return total
 
+# Pedir al usuario que ingrese la cantidad sin IVA
+cantidad_sin_iva = float(input("Ingrese la cantidad sin IVA: "))
 
-print(calcular_factura(100))  
+# Pedir al usuario que ingrese el porcentaje de IVA
+iva = float(input("Ingrese el porcentaje de IVA: "))
+
+# Calcular el total
+total = cantidad_sin_iva + (cantidad_sin_iva * (iva / 100))
+
+# Mostrar el total
+print(f"El total de la factura después del IVA es: {total:.2f}")
